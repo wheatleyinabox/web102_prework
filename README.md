@@ -25,7 +25,7 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented features:
 
-<img src='https://imgur.com/a/8TAxZj1' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/wheatleyinabox/web102_prework/blob/main/assets/web102-prework-valen.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LICEcap](https://getkap.co/) for macOS
 
