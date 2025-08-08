@@ -36,7 +36,7 @@ GIF created with ...
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+No issues! Had a fun time working on this!
 
 ## License
 
