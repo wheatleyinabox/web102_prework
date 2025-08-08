@@ -5,6 +5,10 @@ body {
     background-color: #758190;
 }
 
+.content {
+    margin: 5%;
+}
+
 #tentacles {
     width: 50px;
 }
@@ -34,11 +38,46 @@ body {
 }
 .stats-card:hover {
     cursor: pointer;
-    box-shadow: 0 0 30px lightblue;
+    animation: grow 0.5s forwards;
+}
+@keyframes grow {
+      from 
+      {
+        transform: scale(1);
+      }
+      to 
+      {
+        transform: scale(0.95);
+      }
+}
+
+.progress-bar-container {
+    width: 100%;
+    background: #eee;
+    height: 16px;
+    margin: 8px 0;
+    overflow: visible;
+    position: relative;
+}
+
+.progress-bar {
+    height: 100%;
+    background: #4caf50;
+    position: relative;
+}
+
+.progress-bar.funded {
+    animation: flash 1s infinite alternate;
+    background: #4caf50;
+}
+
+@keyframes flash {
+    from { opacity: 1; }
+    to { opacity: 0.5; }
 }
 
 #num-contributions, #total-raised, #num-games {
-    font-size: 50px;
+    font-size: 20px;
 }
 
 #games-container {
@@ -64,7 +103,7 @@ body {
 
 .game-card:hover {
     cursor: pointer;
-    box-shadow: 0 0 30px lightblue;
+    box-shadow: 0 0 30px #a8b0bc;
 }
 
 #button-container {

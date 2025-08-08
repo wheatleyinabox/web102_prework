@@ -37,6 +37,11 @@ function addGamesToPage(games) {
         // add the class game-card to the list
         gameCard.classList.add("game-card");
 
+        // EXTRA: Progress Bar for Funding
+        const percent = Math.min(100, games[i].pledged / games[i].goal * 100);
+        // If funded, change the color to green
+        const fundedClass = games[i].pledged >= games[i].goal ? "funded" : "";
+
         // set the inner HTML using a template literal to display some info 
         // about each game
         // TIP: if your images are not displaying, make sure there is space
@@ -47,8 +52,12 @@ function addGamesToPage(games) {
                 <p id="name"><strong>${games[i].name}</strong></p>
                 <p id="desc">${games[i].description}</p>
                 <hr>
-                <p id="goal">${games[i].backers} backers</p>
                 <p id="funding-and-from">$${(games[i].pledged).toLocaleString('en-US')} of $${(games[i].goal).toLocaleString('en-US')}</p>
+
+                <div class="progress-bar-container">
+                    <div class="progress-bar ${fundedClass}" style="width: ${percent}%;">
+                    </div>
+                </div>
             </div>
         `;
 
